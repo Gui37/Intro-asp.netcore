@@ -7,14 +7,14 @@
 
 <h1>Filmes</h1>
 
-<button type="btn-primary">
-    <a asp-page="Create">Cria um novo Filme</a>
+<button class="btn btn-dark" type ="button">
+    <a asp-page="Create" id="Btn-Link">Inserir Novo Dado</a>
 </Button>
 
 <form>
     <p>
         Género: <select asp-for="GeneroFilme" asp-items="Model.Genero">
-            <option value="">All</option>
+            <option value="">Todos</option>
         </select>
         Título: <input type="text" asp-for="SearchString" />
         <input type="submit" value="Filtrar" />
@@ -39,7 +39,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Filme[0].Rating)
             </th>
-            <th></th>
+            <th>
+                <center>Acções</center> 
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -61,9 +63,9 @@
                 @Html.DisplayFor(modelItem => item.Rating)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Detalhes</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Apagar</a>
             </td>
         </tr>
 }

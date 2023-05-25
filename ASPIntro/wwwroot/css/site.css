@@ -12,6 +12,11 @@ html {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
+a:hover, a:visited, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
 html {
   position: relative;
   min-height: 100%;
@@ -19,4 +24,11 @@ html {
 
 body {
   margin-bottom: 60px;
+}
+
+#Btn-Link {
+    text-decoration:none;
+}
+center {
+    margin-left: 30px;
 }

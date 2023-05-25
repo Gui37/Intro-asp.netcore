@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using ASPIntro.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.EntityFrameworkCore;
-using ASPIntro.Data;
-using ASPIntro.Models;
-using Microsoft.AspNetCore.DataProtection.XmlEncryption;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.DotNet.Scaffolding.Shared.Messaging;
+using Microsoft.EntityFrameworkCore;
 
 namespace ASPIntro.Pages.Filmes
 {
@@ -22,14 +15,14 @@ namespace ASPIntro.Pages.Filmes
             _context = context;
         }
 
-        public IList<Filme> Filme { get;set; } = default!;
+        public IList<Filme> Filme { get; set; } = default!;
 
         [BindProperty(SupportsGet = true)]
         public string? SearchString { get; set; }
 
-        public SelectList? Genero{ get; set; }
+        public SelectList? Genero { get; set; }
         [BindProperty(SupportsGet = true)]
-        public string? GeneroFilme  { get; set; }
+        public string? GeneroFilme { get; set; }
 
         public async Task OnGetAsync()
         {
@@ -37,8 +30,8 @@ namespace ASPIntro.Pages.Filmes
             {
                 Filme = await _context.Filme.ToListAsync();
             }
-            IQueryable<string> generoQuery = from m in _context.Filme 
-                                             orderby m.Genre 
+            IQueryable<string> generoQuery = from m in _context.Filme
+                                             orderby m.Genre
                                              select m.Genre;
             var filmes = from m in _context.Filme select m;
             if (!string.IsNullOrEmpty(SearchString))
@@ -53,7 +46,7 @@ namespace ASPIntro.Pages.Filmes
 
             Filme = await filmes.ToListAsync();
 
-            
+
         }
     }
 }

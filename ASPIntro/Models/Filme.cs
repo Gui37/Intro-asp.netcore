@@ -11,6 +11,7 @@ namespace ASPIntro.Models
         [StringLength(50)]
         public string? Title { get; set; }
 
+        [Required]
         [Display(Name =" Release Date")]
         [DataType(DataType.Date)]
         public DateTime ReleaseDate { get; set; }
@@ -19,8 +20,8 @@ namespace ASPIntro.Models
         [StringLength(50)]
         [RegularExpression(@"^[A-Z]+[a-zA-Z\s]*$")]
         public string? Genre { get; set; }
-      
-        
+
+        [Required]
         [DataType(DataType.Currency)]
         [Column(TypeName = "decimal (18, 2")]
         public decimal Price { get; set; }
