@@ -28,7 +28,13 @@ body {
 
 #Btn-Link {
     text-decoration:none;
+    margin:10px 0px 10px 0px;
 }
+
+#Btn-insert {
+    margin-bottom: 20px
+}
+
 center {
     margin-left: 30px;
 }

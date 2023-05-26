@@ -66,7 +66,7 @@ namespace ASPIntro.Pages.Filmes
                 }
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("../Index");
         }
 
         private bool FilmeExists(int id)

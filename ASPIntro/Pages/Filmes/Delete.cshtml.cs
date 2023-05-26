@@ -57,7 +57,7 @@ namespace ASPIntro.Pages.Filmes
                 await _context.SaveChangesAsync();
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("../Index");
         }
     }
 }

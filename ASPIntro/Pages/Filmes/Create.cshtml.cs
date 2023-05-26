@@ -39,7 +39,7 @@ namespace ASPIntro.Pages.Filmes
             _context.Filme.Add(Filme);
             await _context.SaveChangesAsync();
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("../Index");
         }
     }
 }

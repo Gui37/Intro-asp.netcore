@@ -14,39 +14,36 @@
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Filme.Title" class="control-label"></label>
+                <label asp-for="Filme.Title" class="control-label">Título</label>
                 <input asp-for="Filme.Title" class="form-control" />
                 <span asp-validation-for="Filme.Title" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Filme.ReleaseDate" class="control-label"></label>
+                <label asp-for="Filme.ReleaseDate" class="control-label">Data de Lançamento</label>
                 <input asp-for="Filme.ReleaseDate" class="form-control" />
                 <span asp-validation-for="Filme.ReleaseDate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Filme.Genre" class="control-label"></label>
+                <label asp-for="Filme.Genre" class="control-label">Género</label>
                 <input asp-for="Filme.Genre" class="form-control" />
                 <span asp-validation-for="Filme.Genre" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Filme.Price" class="control-label"></label>
+                <label asp-for="Filme.Price" class="control-label">Preço</label>
                 <input asp-for="Filme.Price" class="form-control" />
                 <span asp-validation-for="Filme.Price" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Filme.Rating" class="control-label"></label>
+                <label asp-for="Filme.Rating" class="control-label">Pontuação</label>
                 <input asp-for="Filme.Rating" class="form-control" />
                 <span asp-validation-for="Filme.Rating" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Create" class="btn btn-primary" /> |
+                <button class="btn btn-warning" id="Btn-Link"><a asp-page="../Index">Back to List</a></button>
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-page="Index">Back to List</a>
 </div>
 
 @section Scripts {

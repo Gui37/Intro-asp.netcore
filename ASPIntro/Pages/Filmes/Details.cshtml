@@ -44,6 +44,6 @@
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.Filme?.Id">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+    <button class="btn btn-primary" id="Btn-Link"><a asp-page="Edit" asp-route-id="@Model.Filme?.Id">Edit</a></button>
+    <button class="btn btn-warning" id="Btn-Link"><a asp-page="../Index">Back to List</a></button>
 </div>

@@ -40,15 +40,14 @@
                 <span asp-validation-for="Filme.Rating" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Save" class="btn btn-primary" id="Btn-Link"/> |
+                <button class="btn btn-warning" id="Btn-Link"><a asp-page="../Index">Back to List</a></button>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-page="./Index">Back to List</a>
-</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
